@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 15:39:01 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/12 16:43:10 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/02/15 14:55:40 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>

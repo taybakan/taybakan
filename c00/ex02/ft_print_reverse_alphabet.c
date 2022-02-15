@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 11:13:37 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/12 15:34:05 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/02/15 14:54:10 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>

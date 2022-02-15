@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 09:40:54 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/12 15:30:58 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/13 09:57:02 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/13 09:58:44 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>

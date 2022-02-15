@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: skel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 10:05:44 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/15 14:53:08 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/13 18:41:22 by skel              #+#    #+#             */
+/*   Updated: 2022/02/13 18:42:38 by skel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz\n", 27);
+	write(1, &c, 1);
 }
