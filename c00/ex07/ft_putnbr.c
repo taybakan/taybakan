@@ -6,7 +6,7 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 11:22:58 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/15 15:17:18 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/02/16 10:51:41 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -18,8 +18,8 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	int digits;
-	int number[10];
+	int	digits;
+	int	number[10];
 
 	digits = 0;
 	if (nb == -2147483648)
@@ -27,7 +27,7 @@ void	ft_putnbr(int nb)
 	else if (nb < 0)
 	{
 		ft_putchar('-');
-		nb *=-1;
+		nb *= -1;
 	}
 	while (0 < nb)
 	{
@@ -40,8 +40,8 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int	main()
+/*int	main()
 {
 	ft_putnbr(42);
 	return (0);
-}
+}*/

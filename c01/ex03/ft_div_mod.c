@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 10:05:44 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/16 10:45:38 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/16 11:34:51 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/16 11:36:23 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <unistd>
 
-void	ft_print_alphabet(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
-	{
-		write(1, &a, 1);
-		a++;
-	}
+	*div = a / b;
+	*mod = a % b;
 }
-
-/*int main()
-{
-	ft_print_alphabet();
-	return (0);
-}*/

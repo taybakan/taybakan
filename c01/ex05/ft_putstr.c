@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 13:54:59 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/16 10:49:29 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/16 13:29:33 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/16 13:37:40 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -16,30 +16,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_comb2(void)
+void	ft_putstr(char *str)
 {
-	int	f;
-	int	l;
+	int index;
 
-	f = -1;
-	while (++f <= 98)
+	index = 0;
+	while (str[index] != '\0')
 	{
-		l = f;
-		while (++l <= 99)
-		{
-			ft_putchar(f / 10 + '0');
-			ft_putchar(f % 10 + '0');
-			write (1, " ", 1);
-			ft_putchar(l / 10 + '0');
-			ft_putchar(l % 10 + '0');
-			if (f != 98 || l != 99)
-				write(1, ", ", 2);
-		}
+		ftr_putchar(str[index]);
+		index++;
 	}
 }
-
-/*int main()
-{
-	ft_print_comb2();
-	return (0);
-}*/

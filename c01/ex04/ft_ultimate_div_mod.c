@@ -1,45 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 13:54:59 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/16 10:49:29 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/16 11:37:04 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/16 11:42:40 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_ultimate_div_mod(int *a, int *b);
 {
-	write(1, &c, 1);
+	int	nbr1;
+	int	nbr2;
+
+	nbr1 = *a;
+	nbr2 = *b;
+	*a = nbr1 / nbr2;
+	*b = nbr1 % nbr2;
 }
-
-void	ft_print_comb2(void)
-{
-	int	f;
-	int	l;
-
-	f = -1;
-	while (++f <= 98)
-	{
-		l = f;
-		while (++l <= 99)
-		{
-			ft_putchar(f / 10 + '0');
-			ft_putchar(f % 10 + '0');
-			write (1, " ", 1);
-			ft_putchar(l / 10 + '0');
-			ft_putchar(l % 10 + '0');
-			if (f != 98 || l != 99)
-				write(1, ", ", 2);
-		}
-	}
-}
-
-/*int main()
-{
-	ft_print_comb2();
-	return (0);
-}*/
