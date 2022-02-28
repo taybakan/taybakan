@@ -5,7 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: taybakan <taybakan@42istanbul.com.tr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 13:59:54 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/22 15:14:59 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/28 09:22:48 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/28 09:23:18 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+char	*ft_strlowcase(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*(str + i) != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
+	}
+	return (str);
+}

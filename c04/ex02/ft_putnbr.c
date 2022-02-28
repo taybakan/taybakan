@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 13:49:21 by taybakan          #+#    #+#             */
-/*   Updated: 2022/02/28 09:18:27 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/28 16:18:27 by taybakan          #+#    #+#             */
+/*   Updated: 2022/02/28 16:49:40 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (*(src + i) != '\0' && i < n)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
 	}
-	while (i < n)
+	if (nb < 0)
 	{
-		*(dest + i) = '\0';
-		i++;
+		ft_putchar('-');
+		nb *= -1;
 	}
-	return (dest);
+	if (nb < 10)
+	{
+		ft_putchar(nb + 48);
+		return ;
+	}
+	else
+		ft_putnbr(nb / 10);
+	ft_putnbr(nb % 10);
 }
