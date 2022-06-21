@@ -1,0 +1,5 @@
+vim
+let g:user42 = 'taybakan'
+let g:mail42 = 'taybakan@student.42istanbul.com.tr'
+
+syntax: on
