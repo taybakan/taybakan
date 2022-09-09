@@ -6,48 +6,29 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 20:13:56 by taybakan          #+#    #+#             */
-/*   Updated: 2022/07/02 20:48:13 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:02:07 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
-//#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*str;
 	size_t	i;
-	char	*sub;
-	size_t	c;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)start)
-		i++;
-	if (s[i] == (char)start)
-	{
-		sub = (char *)malloc(sizeof(char) * len);
-		c = 0;
-		while (s[i] != '\0' && c < len)
-		{
-			sub[c] = s[i];
-			c++;
-			i++;
-		}
-		sub[c] = '\0';
-		return (sub);
-	}
-	return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	while (i < len)
+		str[i++] = s[start++];
+	str[i] = '\0';
+	return (str);
 }
-/*int	main()
-{
-	char const		*s;
-	unsigned int	start;
-	size_t			len;
-
-	s = "cemalaybakan";
-	start = 97;
-	len = 5;
-	printf("%s\n", (ft_substr(s, start, len)));
-	return (1);
-}
-*/

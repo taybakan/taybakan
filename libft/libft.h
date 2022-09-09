@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/25 11:31:25 by mkorucu           #+#    #+#             */
-/*   Updated: 2022/07/03 17:16:46 by mkorucu          ###   ########.fr       */
+/*   Created: 2022/06/25 11:31:25 by taybakan          #+#    #+#             */
+/*   Updated: 2022/09/09 12:16:06 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

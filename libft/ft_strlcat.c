@@ -3,54 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 12:29:53 by taybakan          #+#    #+#             */
-/*   Updated: 2022/08/31 14:25:36 by taybakan         ###   ########.fr       */
+/*   Created: 2022/02/20 11:37:05 by mkorucu           #+#    #+#             */
+/*   Updated: 2022/07/03 11:26:45 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	a;
+	size_t	s;
 	size_t	d;
 
-	a = 0;
-	i = 0;
 	d = 0;
-	while (dst[i] != '\0')
-	{
-		temp[i] = dst[i];
-		i++;
+	s = 0;
+	while (dst[d] && (d < dstsize))
 		d++;
-	}
-	while (src[a] != '\0')
+	while (src[s] && d + s + 1 < dstsize)
 	{
-		if (i <= (dstsize -1))
-		{
-			temp[i] = src[a];
-			i++;
-		}
-		a++;
+		dst[s + d] = src[s];
+		s++;
 	}
-	temp[i] = '\0';
-	printf("%s\n", temp);
-	printf("%zu\n", (d + a));
-	return (d + a);
+	if (d < dstsize)
+		dst[d + s] = '\0';
+	return (d + ft_strlen(src));
 }
-//	int	main(void)
-//	{
-//		char *a;
-//		const char *b;
-//		size_t i;
-//
-//		a = "cemal";
-//		b = "aybakan";
-//		i = 10;
-//		ft_strlcat(a, b, i);
-//		return(1);
-//	}

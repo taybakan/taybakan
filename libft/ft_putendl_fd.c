@@ -6,13 +6,13 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 01:29:31 by taybakan          #+#    #+#             */
-/*   Updated: 2022/07/31 01:31:43 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/09/09 11:27:03 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

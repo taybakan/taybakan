@@ -6,13 +6,13 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 01:25:34 by taybakan          #+#    #+#             */
-/*   Updated: 2022/07/31 01:26:24 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/09/09 11:27:29 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 

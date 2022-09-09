@@ -6,7 +6,7 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 16:01:14 by taybakan          #+#    #+#             */
-/*   Updated: 2022/08/25 19:11:11 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/09/09 11:45:13 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 	if (!*alst)
 	{
 		*alst = new;
-		retrun ;
+		return ;
 	}
 	last_elem = ft_lstlast(*alst);
 	last_elem->next = new;
