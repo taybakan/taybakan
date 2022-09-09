@@ -1,103 +1,42 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: bkaramol <bkaramol@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/05 04:01:36 by bkaramol          #+#    #+#              #
-#    Updated: 2022/07/16 19:59:39 by bkaramol         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME	=	libft.a
 
+SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
+				ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
+				ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
+				ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
+				ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+				ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-# 	makefile tekniği çok sayıda kodu kolayca derleyip debug etmeye yarar.
-# 	yani tek tek gcc *.c yazmamıza gerek kalmıyor. gcc'nin çalışma mantığı
-# 		1) preprocessing (standart çıktı) [gcc -E]
-# 			*	yorumları siler
-# 			*	makroları açar
-# 			*	.h uzantılı kütüphaneleri import eder
-# 				bunun için direkt olarak kütüphaneyi kopyalar
-# 				koda yapıştırıp çalıştırır
-# 		2) compiling (derleme) [gcc -S]
-# 			*	assembly koduna çevirir
-# 			*	böylelikle asd.s (assembly uzantısı) oluşur
-# 		3) assembly (bir araya getirme) [gcc -c]
-# 			*	assembly kodu makina diline (0-1) çevrilir
-# 			*	böylece .o uzantılı object dosyaları oluşur
-# 				bu dosyalar makine diline en yakına aşamadır
-# 		4) linking (bağlama)
-# 			*	nesne kodları çalıştırılabilir bir dosyaya linklenir
-# 			*	bu işlemin sonucunda nihai çalıştırılabilir dosya
-# 				elde edilir (.exe ya da .out veya uzantısız)
+OBJS = $(SRCS:.c=.o)
 
-# extension aramaya vsc'de ext:s,c,o vs. yazarsan o uzantıyla ilgili
-# paketler gelir
-# değişkenleri yazarken $() içine yazıyoruz
-# make ... demek ... komutunu çalıştır demek
-# direkt make yazarsan ilk komutu çalıştırır
+BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+				ft_lstlast.c ft_lstadd_back.c \
+				ft_lstdelone.c ft_lstclear.c \
+				ft_lstiter.c ft_lstmap.c
 
-# burada kaynak kodlarımızı listeliyoruz
-SRCS			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-					ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
-					ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-					ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
-					ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
-					ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
+BONUS_OBJS	= $(BONUS:.c=.o)
 
-# bu komut ile .c uzantılıları .o uzantıya çeviriyoruz
-OBJS			= $(SRCS:.c=.o)
+CC	=	gcc
+RM	=	rm -f
+FLAGS	= -Wall -Wextra -Werror
 
-# bonusları ekliyoruz
-BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
-					ft_lstmap.c ft_lstnew.c ft_lstsize.c
-					
-BONUS_OBJS		= $(BONUS:.c=.o)
+$(NAME): 
+		$(CC) $(FLAGS) -c $(SRCS) 
+		ar rc $(NAME) $(OBJS)
 
-# aliaslar ekliyoruz
-CC				= gcc
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+all: $(NAME)
 
-NAME			= libft.a
+bonus:
+		$(CC) $(FLAGS) -c $(BONUS)
+		ar rc $(NAME) $(BONUS_OBJS)
 
-
-# iki noktadan önce yazdıkların kuraldır
-# yanına yazdıkların kuralın geçerli olacağı şeydir
-# altına indented yazdıkların da o kuralı gerçekleştirecek komutlardır
-# kural: nesne
-#	 komutlar
-# komutlar sonucu kural oluşur, kuralın oluşabilmesi için nesneye ihtiyaç var
-# makefile soldan sağa ve yukarıdan aşağıya çalışır. sıralamalar önemlidir
-
-
-# all -> tüm kuralları çalıştıran kök kural
-all:			$(NAME)
-
-# başlarındaki $ onların değişken olduğunu söylüyor
-# ar means archive. yoksa oluşturuyor.
-# r --> replace the content in the archive
-# c --> create a new archive
-# s --> Write an object-file index into the archive
-$(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
-
-# derleme sonrası oluşan ara dosyaları siler
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+		$(RM) $(OBJS) 
+		$(RM) $(BONUS_OBJS)
 
-# fclean derleme sonrası oluşan tüm dosyaları siler (fullclean)
-fclean:			clean
-				$(RM) $(NAME)
+fclean: clean
+		$(RM) $(NAME)
 
-# kütüphaneyi yeniden çalıştırır. önce fclean ile
-# her şeyi siler sonra all ile yeniden yapar
-re:				fclean all
+re: fclean all
 
-bonus:			$(OBJS) $(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-# C clean kuralını çalıştırmak istesin. aynı adda bir başka klasör ya da dosya varsa
-# ona gitmesin kural olan clean'i anlasın diye bunu yazıyoruz.
-.PHONY:			all clean fclean re bonus
+.PHONY: all clean fclean re bonus

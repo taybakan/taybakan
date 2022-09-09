@@ -6,7 +6,7 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:29:53 by taybakan          #+#    #+#             */
-/*   Updated: 2022/08/25 19:38:10 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:25:36 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	printf("%zu\n", (d + a));
 	return (d + a);
 }
-/* int	main(void)
-{
-	char *a;
-	const char *b;
-	size_t i;
-
-	a = "cemal";
-	b = "aybakan";
-	i = 10;
-	ft_strlcat(a, b, i);
-	return(1);
-}
+//	int	main(void)
+//	{
+//		char *a;
+//		const char *b;
+//		size_t i;
+//
+//		a = "cemal";
+//		b = "aybakan";
+//		i = 10;
+//		ft_strlcat(a, b, i);
+//		return(1);
+//	}

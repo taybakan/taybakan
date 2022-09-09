@@ -6,11 +6,11 @@
 /*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 15:31:57 by taybakan          #+#    #+#             */
-/*   Updated: 2022/08/25 19:01:52 by taybakan         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:17:28 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft."
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

@@ -3,60 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 14:42:11 by taybakan          #+#    #+#             */
-/*   Updated: 2022/08/25 19:36:34 by taybakan         ###   ########.fr       */
+/*   Created: 2022/06/23 11:28:35 by mkorucu           #+#    #+#             */
+/*   Updated: 2022/07/03 11:13:42 by mkorucu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdio.h>
-//#include <stdlib.h>
-
-struct s_ind
-{
-	size_t	i1;
-	size_t	i2;
-	size_t	i3;
-	size_t	i4;
-};
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trim;
+	int	ind;
 
-	struct	s_ind index = {strlen(s1) -1, 0, 0, 0};
-	while (set[index.i4] != '\0')
-	{
-		if (s1[index.i1] == set[index.i4])
-		{
-			index.i1--;
-			index.i4 = 0;
-		}
-		else if (s1[index.i2] == set[index.i4])
-		{
-			index.i2++;
-			index.i4 = 0;
-		}
-		else
-			index.i4++;
-	}
-	trim = (char *)malloc(sizeof(char) * (index.i1 - index.i2 + 1));
-	while (index.i1 >= index.i2)
-	{
-		trim[index.i3] = s1[index.i2];
-		index.i3++;
-		index.i2++;
-	}
-	trim[index.i3] = '\0';
-	return (trim);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	ind = ft_strlen(s1);
+	while (ind && ft_strchr(set, s1[ind]))
+		ind--;
+	return (ft_substr(s1, 0, ind + 1));
 }
-/*int main()
-{
-	char *a = "aaccccabHello Worldbbaabbbaaa";
-	char *b = "abc";
-	printf("%s\n", ft_strtrim(a, b));
-	return 0;
-}*/
