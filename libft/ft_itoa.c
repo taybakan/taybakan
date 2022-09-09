@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 17:05:54 by mkorucu           #+#    #+#             */
-/*   Updated: 2022/07/03 14:13:37 by mkorucu          ###   ########.fr       */
+/*   Created: 2022/06/23 17:05:54 by taybakan          #+#    #+#             */
+/*   Updated: 2022/07/03 14:13:37 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

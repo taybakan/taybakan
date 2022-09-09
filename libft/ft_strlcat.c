@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkorucu <mkorucu@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: taybakan <taybakan@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 11:37:05 by mkorucu           #+#    #+#             */
-/*   Updated: 2022/07/03 11:26:45 by mkorucu          ###   ########.fr       */
+/*   Created: 2022/02/20 11:37:05 by taybakan          #+#    #+#             */
+/*   Updated: 2022/07/03 11:26:45 by taybakan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
